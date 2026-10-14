@@ -1,0 +1,13 @@
+RewriteEngine On
+
+# 1. কেউ যদি সরাসরি .html সহ লিখে আসে, তবে তাকে ক্লিন URL-এ রিডাইরেক্ট (301) করবে
+# যেমন: dedegree.in/collections.html -> dedegree.in/collections
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+(.*?)(?:\.html)?[\s?] [NC]
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+(.*?)\.html[\s?] [NC]
+RewriteRule ^ %1 [R=301,L]
+
+# 2. ক্লিন URL আসলে সার্ভার ভেতর থেকে সংশ্লিষ্ট .html ফাইলটি লোড করবে
+# যেমন: dedegree.in/collections আসলে ভেতর থেকে collections.html ফাইলটি দেখাবে
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [L]
