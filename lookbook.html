@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editorial Lookbook — Degree Luxury Leather</title>
+  <meta name="description" content="View the Autumn / Winter Degree Visual Lookbook. Photographic essays on quiet luxury, Italian leathercraft, and architectural bag design.">
+  <link rel="icon" type="image/png" href="img1_zaomed.png">
+  <!-- Luxury Font Preloads (Tan Garland & Safira March) -->
+  <link rel="preload" href="tan-garland.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="safira-march.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="catchy-mager.otf" as="font" type="font/woff" crossorigin>
+  <link rel="stylesheet" href="style.css?v=6.8">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="announcement-bar" aria-label="Store Announcements">
+    <div class="announcement-inner">
+      <div class="announcement-message-slider">
+        <div class="announcement-message active">
+          <span><svg class="announcement-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg> 100% Sustainably Sourced Full-Grain Leather • Lifetime Stitch Guarantee</span>
+        </div>
+        <div class="announcement-message">
+          <span><svg class="announcement-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 12V8H4v4"/><path d="M2 12h20v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-8Z"/><path d="M12 22V8"/><path d="M12 8a3 3 0 1 0-3-3c2 0 3 3 3 3Z"/><path d="M12 8a3 3 0 1 1 3-3c-2 0-3 3-3 3Z"/></svg> Complimentary Handcrafted Dust Bag & Luxury Box with Every Order</span>
+        </div>
+        <div class="announcement-message">
+          <span><svg class="announcement-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg> Complimentary Nationwide Express Delivery on Orders Over ₹12,000</span>
+        </div>
+      </div>
+      <div class="announcement-currency">
+        <span style="font-size: 0.7rem; opacity: 0.8; text-transform: uppercase;">Region:</span>
+        <select id="currencySelect" class="currency-select" aria-label="Select Currency">
+          <option value="INR">INR (₹)</option>
+          <option value="USD">USD ($)</option>
+          <option value="EUR">EUR (€)</option>
+          <option value="GBP">GBP (£)</option>
+        </select>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Luxury Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <!-- Mobile Hamburger -->
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- Brand Logo (Left) -->
+      <a href="index.html" class="brand-logo-wrap" aria-label="Degree Luxury Home">
+        <img src="logo-white.png?v=2.0" alt="Degree Luxury Leather Logo" class="brand-logo-img">
+      </a>
+
+      <!-- Desktop Nav Menu (Center) -->
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="collections.html" class="nav-link">Collection</a></li>
+          <li><a href="lookbook.html" class="nav-link active">Lookbook</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+          <li><a href="orders.html" class="nav-link">Orders</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="action-btn" id="searchTriggerBtn" aria-label="Search Catalog" title="Search">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+        </button>
+
+        <!-- VIP Client Login / Avatar Trigger -->
+        <button class="action-btn" id="loginTriggerBtn" aria-label="VIP Client Account" title="Sign In / VIP Patron">
+          <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+          </svg>
+        </button>
+
+        <button class="action-btn" id="wishlistTriggerBtn" aria-label="Wishlist" title="Saved Bags">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+          <span class="cart-count-badge" id="wishlistCountBadge">1</span>
+        </button>
+
+        <button class="action-btn" id="cartTriggerBtn" aria-label="Shopping Bag" title="Shopping Bag">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+          <span class="cart-count-badge" id="cartCountBadge">1</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="page-hero-eyebrow">Autumn • Winter Visual Essay</span>
+      <h1 class="page-hero-title">The Degree Lookbook</h1>
+    </div>
+  </section>
+
+  <!-- Lookbook Spreads -->
+  <section class="lookbook-section">
+    <div class="container">
+
+      <!-- Spread 1: The Atelier Multi-Pocket Carryall -->
+      <div class="lookbook-editorial-grid">
+        <div class="lookbook-col-large">
+          <div class="lookbook-editorial-card">
+            <img src="img2_tpffn3.png" alt="Morning Light in The Studio — The Atelier Tote">
+          </div>
+        </div>
+        <div class="lookbook-col-small">
+          <div class="lookbook-editorial-text">
+            <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--color-green-rich); font-weight: 700; display: block; margin-bottom: 0.6rem;">Study No. 01 • Morning Light</span>
+            <div class="lookbook-editorial-quote">
+              "Tactile warmth on reclaimed oak. The uncorrected canvas breathes while vegetable-tanned handles hold their form."
+            </div>
+            <p style="font-size: 0.92rem; color: var(--color-gray-dark); line-height: 1.8; margin-bottom: 2rem;">
+              Captured in our daylight workshop alongside dried botanicals and editorial periodicals. Note the brass buckle patina and hand-burnished leather welt stitching.
+            </p>
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span class="lookbook-product-tag">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline-block; vertical-align:middle; margin-right:4px;"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                The Atelier Multi-Pocket Tote
+              </span>
+              <a href="bags.html" class="btn-luxury-primary" style="padding: 0.7rem 1.4rem; font-size: 0.72rem;">View Piece</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Spread 2: The 245 Heritage Saddle Bag -->
+      <div class="lookbook-editorial-grid">
+        <div class="lookbook-col-small" style="order: 2;">
+          <div class="lookbook-editorial-card">
+            <img src="img3_khoeua.png" alt="Architectural Form — The 245 Saddle Crossbody">
+          </div>
+        </div>
+        <div class="lookbook-col-large" style="order: 1;">
+          <div class="lookbook-editorial-text">
+            <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--color-green-rich); font-weight: 700; display: block; margin-bottom: 0.6rem;">Study No. 02 • Stone & Hide</span>
+            <div class="lookbook-editorial-quote">
+              "A study in equestrian balance. The pebbled flap drapes with heavy grace against a travertine plinth."
+            </div>
+            <p style="font-size: 0.92rem; color: var(--color-gray-dark); line-height: 1.8; margin-bottom: 2rem;">
+              The stenciled canvas body pays quiet tribute to vintage field couriers, while the cognac leather softens with bodily warmth over seasons of wear.
+            </p>
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span class="lookbook-product-tag">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline-block; vertical-align:middle; margin-right:4px;"><path d="M20 7h-3V5a2 2 0 0 0-2-2h-6a2 2 0 0 0-2 2v2H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2ZM9 5h6v2H9V5Zm11 14H4V9h16v10Z"/></svg>
+                The Heritage Saddle Crossbody
+              </span>
+              <a href="bags.html" class="btn-luxury-primary" style="padding: 0.7rem 1.4rem; font-size: 0.72rem;">View Piece</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Spread 3: The Riviera Croc Baguette -->
+      <div class="lookbook-editorial-grid">
+        <div class="lookbook-col-large">
+          <div class="lookbook-editorial-card">
+            <img src="img4_bokvg9.png" alt="Sunbeam & Glaze — The Riviera Baguette">
+          </div>
+        </div>
+        <div class="lookbook-col-small">
+          <div class="lookbook-editorial-text">
+            <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--color-green-rich); font-weight: 700; display: block; margin-bottom: 0.6rem;">Study No. 03 • Sunset Patina</span>
+            <div class="lookbook-editorial-quote">
+              "Deep crocodile scales catching autumnal raking light. Heirloom craftsmanship ready for midnight terraces."
+            </div>
+            <p style="font-size: 0.92rem; color: var(--color-gray-dark); line-height: 1.8; margin-bottom: 2rem;">
+              Suspended from a minimalist wooden peg rail beside freshly picked citrus. The polished palladium push-lock delivers security with tactile satisfaction.
+            </p>
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span class="lookbook-product-tag">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline-block; vertical-align:middle; margin-right:4px;"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                The Riviera Croc Baguette
+              </span>
+              <a href="bags.html" class="btn-luxury-primary" style="padding: 0.7rem 1.4rem; font-size: 0.72rem;">View Piece</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Luxury Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div>
+          <img src="logo-white.png?v=2.0" alt="Degree Luxury Leather" class="footer-brand-logo">
+          <p class="footer-brand-bio">
+            Degree is an independent luxury leather goods house dedicated to time-honored craftsmanship, full-grain European hides, and quiet, enduring design.
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Collections</h4>
+          <ul class="footer-links-list">
+            <li><a href="bags.html">Atelier Totes</a></li>
+            <li><a href="bags.html">Heritage Saddles</a></li>
+            <li><a href="bags.html">Riviera Baguettes</a></li>
+            <li><a href="collections.html">Forest Green Edit</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">The House</h4>
+          <ul class="footer-links-list">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="lookbook.html">Editorial Lookbook</a></li>
+            <li><a href="reviews.html">Patron Reviews</a></li>
+            <li><a href="contact.html">Concierge</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Client Care</h4>
+          <ul class="footer-links-list">
+            <li><a href="orders.html">Orders & Tracking</a></li>
+            <li><a href="contact.html">Shipping & Returns</a></li>
+            <li><a href="contact.html">Lifetime Repair</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom-row">
+        <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 1rem;">
+          <span>&copy; 2026 Degree Luxury Leather Goods. Handcrafted with pride.</span>
+          <span class="footer-legal-links">
+            <a href="terms.html">Terms & Conditions</a>
+            <a href="privacy.html">Privacy Policy</a>
+          </span>
+        </div>
+        <div class="payment-gateways-row">
+          <span class="payment-tag">UPI</span>
+          <span class="payment-tag">Visa</span>
+          <span class="payment-tag">Mastercard</span>
+          <span class="payment-tag">Amex</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Universal Drawers & Modals -->
+  <div class="cart-drawer-overlay" id="cartDrawerOverlay">
+    <aside class="cart-drawer">
+      <div class="cart-drawer-header">
+        <h3 class="cart-drawer-title">Shopping Bag</h3>
+        <button class="cart-close-btn" id="cartCloseBtn">✕</button>
+      </div>
+      <div class="cart-shipping-meter">
+        <div class="shipping-meter-text" id="shippingMeterText"></div>
+        <div class="shipping-progress-track"><div class="shipping-progress-fill" id="shippingProgressFill"></div></div>
+      </div>
+      <div class="cart-drawer-items" id="cartItemsContainer"></div>
+      <div class="cart-drawer-footer">
+        <div class="cart-subtotal-row">
+          <span class="cart-subtotal-label">Subtotal</span>
+          <span class="cart-subtotal-val" id="cartTotalDisplay">₹ 0</span>
+        </div>
+        <button class="cart-checkout-btn" id="cartCheckoutBtn">Proceed To Secure Checkout</button>
+      </div>
+    </aside>
+  </div>
+
+  <div class="wishlist-drawer-overlay" id="wishlistDrawerOverlay">
+    <aside class="wishlist-drawer">
+      <div class="wishlist-drawer-header">
+        <h3 style="font-family: var(--font-serif); font-size: 1.4rem; text-transform: uppercase;">Curated Wishlist</h3>
+        <button id="wishlistCloseBtn" style="font-size: 1.2rem; cursor: pointer;">✕</button>
+      </div>
+      <div class="wishlist-drawer-items" id="wishlistItemsContainer"></div>
+    </aside>
+  </div>
+
+  <div class="search-modal-overlay" id="searchModalOverlay">
+    <div class="search-modal-inner">
+      <div class="search-input-row">
+        <input type="text" id="searchMainInput" class="search-main-input" placeholder="Search collections, bags, belts, wallets, hues..." autocomplete="off">
+        <button class="search-close-btn" id="searchCloseBtn">✕</button>
+      </div>
+      <div class="search-results-container" id="searchResultsContainer"></div>
+    </div>
+  </div>
+
+  <div class="mobile-nav-overlay" id="mobileNavDrawer">
+    <div class="mobile-nav-content">
+      <div class="mobile-nav-header">
+        <img src="logo-black.png?v=2.0" alt="Degree" style="height:32px;">
+        <button class="mobile-nav-close" id="mobileNavClose">✕</button>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="collections.html">Capsule Collections</a></li>
+        <li><a href="lookbook.html">Editorial Lookbook</a></li>
+        <li><a href="about.html">About The House</a></li>
+        <li><a href="reviews.html">Patron Reviews</a></li>
+        <li><a href="orders.html">Orders & Tracking</a></li>
+        <li><a href="contact.html">Concierge & Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp Concierge Button (Right Down Corner) -->
+  <a href="https://wa.me/" target="_blank" rel="noopener" class="floating-whatsapp" aria-label="Chat with Degree on WhatsApp" title="Chat with us on WhatsApp">
+    <span class="whatsapp-tooltip">Chat with us</span>
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.36c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.71 4.3 3.8.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.29z"/>
+    </svg>
+  </a>
+
+    <!-- ==========================================
+       VIP CLIENT LOGIN & REGISTER MODAL (PREMIUM QUIET LUXURY)
+       ========================================== -->
+    <!-- ==========================================
+       VIP CLIENT LOGIN & REGISTER MODAL (ATELIER LUXURY 2-COLUMN)
+       ========================================== -->
+  <div class="login-modal-overlay" id="loginModalOverlay" role="dialog" aria-modal="true" aria-labelledby="loginHeadingText">
+    <div class="login-modal-box">
+      <button class="login-close-sharp" id="loginCloseBtn" aria-label="Close Modal">✕</button>
+
+      <!-- Left Column: Luxury Brand Artwork -->
+      <div class="login-brand-panel" aria-hidden="true"></div>
+
+      <!-- Right Column: Interactive Form -->
+      <div class="login-form-panel-wrap">
+        <!-- Sign In View -->
+        <div class="auth-view-panel" id="loginFormView">
+          <div class="login-form-content">
+            <h3 class="login-heading" id="loginHeadingText">Welcome Back</h3>
+            <p class="login-subheading">Sign in to continue your journey</p>
+
+            <form id="clientLoginForm">
+              <div class="login-field-sharp">
+                <label for="loginEmail" class="login-label-sharp">Email</label>
+                <div class="login-input-wrapper">
+                  <svg class="login-field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="4" width="20" height="16"></rect>
+                    <path d="M22 6l-10 7L2 6"></path>
+                  </svg>
+                  <input type="email" id="loginEmail" required class="login-input-sharp" placeholder="Enter your email" autocomplete="email">
+                </div>
+              </div>
+
+              <div class="login-field-sharp">
+                <label for="loginPass" class="login-label-sharp">Password</label>
+                <div class="login-input-wrapper">
+                  <svg class="login-field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11"></rect>
+                    <circle cx="12" cy="16" r="1.5"></circle>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                  </svg>
+                  <input type="password" id="loginPass" required class="login-input-sharp" placeholder="Enter your password" autocomplete="current-password">
+                  <button type="button" class="login-pwd-toggle" id="togglePasswordBtn" aria-label="Toggle password visibility">
+                    <svg class="pwd-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                      <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                  </button>
+                </div>
+                <div class="login-forgot-row">
+                  <a href="#" class="login-link-cognac" id="forgotPassBtn">Forgot password?</a>
+                </div>
+              </div>
+
+              <button type="submit" class="btn-login-cognac">
+                <span>Sign In</span>
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </button>
+
+              <div class="login-sharp-divider">
+                <span>OR</span>
+              </div>
+
+              <button type="button" class="btn-google-sharp" id="googleLoginBtn">
+                <svg class="google-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                  <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                  <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                  <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                  <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+                </svg>
+                <span>Continue with Google</span>
+              </button>
+
+              <div class="login-switch-footer">
+                <span>Don't have an account?</span>
+                <a href="#" class="toggle-auth-link" data-target="register">Create an account</a>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Create Account View -->
+        <div class="auth-view-panel hidden" id="registerFormView">
+          <div class="login-form-content">
+            <h3 class="login-heading">Create Account</h3>
+            <p class="login-subheading">Join our VIP atelier for bespoke privileges</p>
+
+            <form id="clientRegisterForm">
+              <div class="login-field-sharp">
+                <label for="regName" class="login-label-sharp">Full Name</label>
+                <div class="login-input-wrapper">
+                  <svg class="login-field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                  <input type="text" id="regName" required class="login-input-sharp" placeholder="Enter your full name" autocomplete="name">
+                </div>
+              </div>
+
+              <div class="login-field-sharp">
+                <label for="regEmail" class="login-label-sharp">Email</label>
+                <div class="login-input-wrapper">
+                  <svg class="login-field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="4" width="20" height="16"></rect>
+                    <path d="M22 6l-10 7L2 6"></path>
+                  </svg>
+                  <input type="email" id="regEmail" required class="login-input-sharp" placeholder="Enter your email" autocomplete="email">
+                </div>
+              </div>
+
+              <div class="login-field-sharp">
+                <label for="regPass" class="login-label-sharp">Password</label>
+                <div class="login-input-wrapper">
+                  <svg class="login-field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11"></rect>
+                    <circle cx="12" cy="16" r="1.5"></circle>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                  </svg>
+                  <input type="password" id="regPass" required minlength="6" class="login-input-sharp" placeholder="Create a secure passphrase" autocomplete="new-password">
+                </div>
+              </div>
+
+              <button type="submit" class="btn-login-cognac">
+                <span>Create Account</span>
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </button>
+
+              <div class="login-sharp-divider">
+                <span>OR</span>
+              </div>
+
+              <button type="button" class="btn-google-sharp btn-google-auth">
+                <svg class="google-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                  <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                  <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                  <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                  <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+                </svg>
+                <span>Continue with Google</span>
+              </button>
+
+              <div class="login-switch-footer">
+                <span>Already have an account?</span>
+                <a href="#" class="toggle-auth-link" data-target="login">Sign In</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js?v=4.0"></script>
+</body>
+</html>
