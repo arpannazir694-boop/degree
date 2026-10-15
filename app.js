@@ -3,6 +3,40 @@
  * High-performance interactive store engine with cross-page persistence
  */
 
+// ==========================================
+// ATELIER COMING SOON OVERLAY - ALL PAGES
+// Displays the teaser card in front with blurred background
+// ==========================================
+(function initAtelierTeaser() {
+  function renderOverlay() {
+    if (!document.body) return;
+    document.body.classList.add('teaser-lock');
+    if (document.getElementById('teaserOverlay')) return;
+    const overlay = document.createElement('aside');
+    overlay.id = 'teaserOverlay';
+    overlay.className = 'teaser-overlay';
+    overlay.setAttribute('aria-modal', 'true');
+    overlay.setAttribute('role', 'dialog');
+    overlay.setAttribute('aria-label', 'Coming Soon');
+    overlay.innerHTML = `
+      <div class="teaser-card">
+        <div class="teaser-card-inner">
+          <p class="teaser-eyebrow">A new design story is unfolding</p>
+          <h2 class="teaser-title">Something Beautiful is Taking shape.</h2>
+          <p class="teaser-desc">Thoughtfully designed bags, wallets and everyday essentials. Created with a love for detail, made to be part of your everyday.</p>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(overlay);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', renderOverlay);
+  } else {
+    renderOverlay();
+  }
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
   // ==========================================
